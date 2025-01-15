@@ -1,0 +1,126 @@
+<link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+<div class="my-header">
+  <div class="inner-container">
+    <div class="left">
+      <button class="button" (click)="openHomePage()"><h3>Home</h3></button>
+      <button class="button">
+        <h3>Shop</h3>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 9L12 15L18 9" stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+
+      </button>
+      <button class="button"><h3>Blog</h3></button>
+      <button class="button"><h3>About us</h3></button>
+      <button class="button"><h3>Contact</h3></button>
+    </div>
+    <div class="center">
+      <div class="logo">
+        <svg width="25" height="25" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="30" height="30" rx="5.95238" fill="#0ACF83"/>
+          <mask id="mask0_648_418" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="30"
+                height="30">
+            <rect y="1.52588e-05" width="30" height="30" rx="5.95238" fill="#0ACF83"/>
+          </mask>
+          <g mask="url(#mask0_648_418)">
+            <path
+              d="M19.3728 14.2857C19.9586 16.4718 18.6588 18.7194 16.4697 19.306C14.2806 19.8926 12.0311 18.5959 11.4453 16.4099C10.8596 14.2238 12.1594 11.9761 14.3485 11.3896C16.5376 10.803 18.7871 12.0996 19.3728 14.2857Z"
+              fill="white"/>
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M-0.341783 2.24862C-0.897847 2.80401 -0.898161 3.70417 -0.342484 4.25917L6.63444 11.2277C5.69111 13.2269 5.42375 15.557 6.04035 17.8582C7.42486 23.0252 12.7418 26.09 17.9161 24.7036C23.0903 23.3171 26.1625 18.0045 24.778 12.8374C23.3935 7.67039 18.0766 4.6056 12.9023 5.99204C12.1233 6.20078 11.3919 6.49852 10.7162 6.87136L3.87919 0.0426029C3.32351 -0.512401 2.42227 -0.512087 1.8662 0.0433045L-0.341783 2.24862ZM16.8555 20.7454C19.8406 19.9456 21.6131 16.8806 20.8143 13.8996C20.0156 10.9186 16.9481 9.15047 13.9629 9.95034C10.9778 10.7502 9.20536 13.8152 10.0041 16.7962C10.8029 19.7772 13.8703 21.5453 16.8555 20.7454Z"
+                  fill="white"/>
+          </g>
+        </svg>
+        <h1>MARKETPLACE</h1>
+      </div>
+    </div>
+
+
+    <div class="right">
+      <div class="search-section">
+      <button class="button" *ngIf="isSearch else searchSection" (click)="openSearchSection()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z"
+            stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21 21L16.65 16.65" stroke="#7F7F7F" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round"/>
+        </svg>
+        <h3>Search</h3>
+      </button>
+        <ng-template #searchSection>
+          <form class="search-bar-section">
+            <input type="search" class="search-bar-1" placeholder="Search..." aria-label="Search" id="search" (keydown.enter)="onEnter()" >
+          </form>
+        </ng-template>
+      </div>
+      <button class="button" *ngIf="userNotNull() else profileSection" (click)="openLoginPage()"><h3>Log in</h3>
+      </button>
+
+    </div>
+    <ng-template #profileSection>
+      <!--    <div class="default-user" *ngIf="userIsAdmin()"-->
+      <button class="button" (click)="openProfilePage()">
+        <h3>My Account</h3>
+      </button>
+      <button class="button"><h3>Cart</h3>
+        <div class="cart-items">
+          <h3>0</h3>
+        </div>
+      </button>
+    </ng-template>
+  </div>
+</div>
+
+
+<!--<link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>-->
+<!--<div class="header">-->
+<!--  <div class="left">-->
+<!--    <button type="button" class="menu-button">-->
+<!--      <svg width="30" height="30" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--        <path d="M2.50001 10.5H17.5" stroke="black" stroke-width="1.4375" stroke-linecap="round"-->
+<!--              stroke-linejoin="round"/>-->
+<!--        <path d="M2.50001 5.5H13.3333" stroke="black" stroke-width="1.4375" stroke-linecap="round"-->
+<!--              stroke-linejoin="round"/>-->
+<!--        <path d="M2.50001 15.5H10" stroke="black" stroke-width="1.4375" stroke-linecap="round" stroke-linejoin="round"/>-->
+<!--      </svg>-->
+<!--    </button>-->
+<!--    <div class="logo">-->
+<!--      <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">-->
+<!--        <rect width="30" height="30" rx="5.95238" fill="#0ACF83"/>-->
+<!--        <mask id="mask0_648_418" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="30" height="30">-->
+<!--          <rect y="1.52588e-05" width="30" height="30" rx="5.95238" fill="#0ACF83"/>-->
+<!--        </mask>-->
+<!--        <g mask="url(#mask0_648_418)">-->
+<!--          <path d="M19.3728 14.2857C19.9586 16.4718 18.6588 18.7194 16.4697 19.306C14.2806 19.8926 12.0311 18.5959 11.4453 16.4099C10.8596 14.2238 12.1594 11.9761 14.3485 11.3896C16.5376 10.803 18.7871 12.0996 19.3728 14.2857Z" fill="white"/>-->
+<!--          <path fill-rule="evenodd" clip-rule="evenodd" d="M-0.341783 2.24862C-0.897847 2.80401 -0.898161 3.70417 -0.342484 4.25917L6.63444 11.2277C5.69111 13.2269 5.42375 15.557 6.04035 17.8582C7.42486 23.0252 12.7418 26.09 17.9161 24.7036C23.0903 23.3171 26.1625 18.0045 24.778 12.8374C23.3935 7.67039 18.0766 4.6056 12.9023 5.99204C12.1233 6.20078 11.3919 6.49852 10.7162 6.87136L3.87919 0.0426029C3.32351 -0.512401 2.42227 -0.512087 1.8662 0.0433045L-0.341783 2.24862ZM16.8555 20.7454C19.8406 19.9456 21.6131 16.8806 20.8143 13.8996C20.0156 10.9186 16.9481 9.15047 13.9629 9.95034C10.9778 10.7502 9.20536 13.8152 10.0041 16.7962C10.8029 19.7772 13.8703 21.5453 16.8555 20.7454Z" fill="white"/>-->
+<!--        </g>-->
+<!--      </svg>-->
+<!--      <h1>Marketplace</h1>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <form class="search-bar-section">-->
+<!--    <style>-->
+<!--      .search-bar {-->
+<!--        background-image: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="%23BABABA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21L16.65 16.65" stroke="%23BABABA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>');-->
+<!--        background-size: 20px 20px;-->
+<!--        background-position: 10px center;-->
+<!--        background-repeat: no-repeat;-->
+<!--        padding-left: 40px; /* Забезпечте відступ для зображення SVG */-->
+<!--      }-->
+<!--    </style>-->
+
+<!--    <input type="search" class="search-bar" placeholder="Search..." aria-label="Search">-->
+<!--  </form>-->
+
+<!--  <div class="right" *ngIf="userNotNull() else profileSection">-->
+<!--    <button class="login-button" (click)="openLoginPage()">Log in</button>-->
+<!--  </div>-->
+<!--  <ng-template #profileSection>-->
+<!--    &lt;!&ndash;    <div class="default-user" *ngIf="userIsAdmin()"&ndash;&gt;-->
+<!--    <button class="profile-button" (click)="openProfilePage()">-->
+<!--      <img class="avatar" src="../../../assets/images/avatar.png" alt="Avatar Banner"/>-->
+<!--    </button>-->
+<!--  </ng-template>-->
+<!--</div>-->

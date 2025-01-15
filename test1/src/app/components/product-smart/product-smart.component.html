@@ -1,0 +1,46 @@
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+
+<div class="banner-background">
+<div class="banner-default">
+  <div class="temp">
+    <img class="banner" [src]="product.image" alt="Profile Banner"/>
+  </div>
+  <div class="frame">
+    <h3>{{product.title}}</h3>
+    <h2>{{product.price}} $</h2>
+
+    <div class="bottom">
+      <div class="left">
+        <div class="stars">
+          <svg width="15" height="15" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"
+                  fill="#FFA500" stroke="#FFA500" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h4>4.6</h4>
+        </div>
+        <div class="reviews">
+          <h4>86 Reviews</h4>
+        </div>
+      </div>
+
+      <button class="product-info" (click)="openProductInfoPage()">
+        <p class="shop-now">Shop now</p>
+        <div class="icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19" stroke="#0ACF83" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 5L19 12L12 19" stroke="#0ACF83" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"/>
+          </svg>
+
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+

@@ -1,0 +1,31 @@
+<div class="admin-container">
+    <table class="table-container">
+        <tr>
+            <th>Email</th>
+            <th>USerName</th>
+            <th>Role</th>
+            <th>Ban</th>
+            <th>Edit</th>
+            <th>Detail Information</th>
+        </tr>
+        <ng-container *ngIf="users.length > 0; else noUsers">
+            <tr *ngFor="let user of users">
+                <td>{{ user.email }}</td>
+                <td>{{ user.name }}</td>
+                <td>
+                </td>
+                <td>
+                    <form [action]="'/admin/user/ban/' + user.id" method="post" >
+                        <input type="submit" value="Ban" class="button" (click)="banUser(user.id!)">
+                    </form>
+                </td>
+                <td><a [href]="'/admin/user/edit/' + user.id">Edit</a></td>
+                <td><a [href]="'/profile/' + user.id">Detail Information</a></td>
+            </tr>
+        </ng-container>
+        <ng-template #noUsers>
+            <h3>NO users</h3>
+        </ng-template>
+    </table>
+</div>
+

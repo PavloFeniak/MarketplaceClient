@@ -1,0 +1,339 @@
+.banner-background{
+  background-color: #0ACF83;
+
+  position: relative;
+  width: 220px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.banner-default{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px;
+  gap: 10px;
+
+  position: relative;
+  width: 200px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin-right: 20px;
+  transition: transform .1s linear;
+}
+.banner-background:hover .banner-default {
+  transform: translate(10px, -10px);
+}
+
+.banner-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+}
+
+.banner-background:hover::before {
+  opacity: 1;
+}
+
+
+.shop-now{
+  width: fit-content;
+  height: 18px;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+
+  color: #0ACF83;
+
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+.product-info{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  background-color: #FFFFFF;
+  border: none;
+}
+h3{
+  /* TMA-2 HD Wireless */
+margin: 0;
+  width: 100%;
+  height: 18px;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+
+  /* Colors / Default */
+  color: #000000;
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+
+}
+.frame{
+  width: 100%;
+  margin-left: 5px
+}
+.temp{
+  width: 100%;
+}
+.banner{
+  /* image 5 */
+
+  width: 100%;
+  height: 200px;
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+h2{
+  /* USD 350 */
+
+  width: 52px;
+  height: 16px;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  /* identical to box height */
+  letter-spacing: 0.2px;
+
+  /* Colors / Default */
+  color: #000000;
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}
+
+
+.bottom{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+}
+.stars{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  gap: 5px;
+}
+
+h4{
+  /* 86 Reviews */
+
+
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9px;
+  line-height: 13px;
+  /* identical to box height */
+  letter-spacing: 0.2px;
+
+  /* Colors / Default */
+  color: #000000;
+
+
+  /* Inside auto layout */
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*!* Banner default *!*/
+
+/*!* Auto layout *!*/
+
+
+
+/*!* Frame 24 *!*/
+
+/*!* Auto layout *!*/
+/*display: flex;*/
+/*flex-direction: column;*/
+/*align-items: flex-start;*/
+/*padding: 0px;*/
+/*gap: 28px;*/
+
+/*width: 151px;*/
+/*height: 138px;*/
+
+
+/*!* Inside auto layout *!*/
+/*flex: none;*/
+/*order: 0;*/
+/*flex-grow: 1;*/
+
+
+/*!* TMA-2 Modular Headphone *!*/
+
+/*width: 151px;*/
+/*height: 90px;*/
+
+/*font-family: 'Montserrat';*/
+/*font-style: normal;*/
+/*font-weight: 700;*/
+/*font-size: 22px;*/
+/*line-height: 30px;*/
+/*!* or 136% *!*/
+/*letter-spacing: 0.2px;*/
+
+/*!* Colors / Default *!*/
+/*color: #000000;*/
+
+
+/*!* Inside auto layout *!*/
+/*flex: none;*/
+/*order: 0;*/
+/*align-self: stretch;*/
+/*flex-grow: 0;*/
+
+
+/*!* Frame 23 *!*/
+
+/*!* Auto layout *!*/
+/*display: flex;*/
+/*flex-direction: row;*/
+/*align-items: center;*/
+/*padding: 0px;*/
+/*gap: 12px;*/
+
+/*width: 100px;*/
+/*height: 20px;*/
+
+
+/*!* Inside auto layout *!*/
+/*flex: none;*/
+/*order: 1;*/
+/*flex-grow: 0;*/
+
+
+/*!* Shop now *!*/
+
+/*width: 68px;*/
+/*height: 18px;*/
+
+/*font-family: 'DM Sans';*/
+/*font-style: normal;*/
+/*font-weight: 700;*/
+/*font-size: 14px;*/
+/*line-height: 18px;*/
+/*letter-spacing: 0.2px;*/
+
+/*!* Colors / Primary *!*/
+/*color: #0ACF83;*/
+
+
+/*!* Inside auto layout *!*/
+/*flex: none;*/
+/*order: 0;*/
+/*flex-grow: 0;*/
+
+
+/*!* Icon / arrow-right *!*/
+
+/*width: 20px;*/
+/*height: 20px;*/
+
+
+/*!* Inside auto layout *!*/
+/*flex: none;*/
+/*order: 1;*/
+/*flex-grow: 0;*/
+
+
+/*!* Vector *!*/
+
+/*position: absolute;*/
+/*left: 20.83%;*/
+/*right: 20.83%;*/
+/*top: 50%;*/
+/*bottom: 50%;*/
+
+/*!* Colors / Primary *!*/
+/*border: 1.4375px solid #0ACF83;*/
+
+
+/*!* Vector *!*/
+
+/*position: absolute;*/
+/*left: 50%;*/
+/*right: 20.83%;*/
+/*top: 20.83%;*/
+/*bottom: 20.83%;*/
+
+/*!* Colors / Primary *!*/
+/*border: 1.4375px solid #0ACF83;*/
+
+
+/*!* image 5 *!*/
+
+/*width: 117px;*/
+/*height: 135px;*/
+
+/*background: url(image.png);*/
+
+/*!* Inside auto layout *!*/
+/*flex: none;*/
+/*order: 1;*/
+/*flex-grow: 0;*/
+

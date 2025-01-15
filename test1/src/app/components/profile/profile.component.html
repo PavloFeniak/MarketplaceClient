@@ -1,0 +1,92 @@
+<div class="profile-page">
+    <div class="profile-section">
+        <div class="header">Profile</div>
+        <div class="main-info">
+            <img class="avatar-img" src="../../../assets/images/avatar.png" alt="Avatar Banner"/>
+            <div class="left">
+                <div class="default-text"><h3>name:</h3>
+                    <h2>{{ getName() }}</h2></div>
+                <div class="default-text"><h3>email:</h3>
+                    <h2>{{getEmail()}}</h2></div>
+            </div>
+
+        </div>
+        <div class="general">
+            <div><h3 class="title">Products</h3></div>
+            <button class="general-item" (click)="showAllProducts()">
+                <h2>All my products</h2>
+                <div class="item-svg" *ngIf="isShow else notShow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 15L12 9L6 15" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <ng-template #notShow>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </ng-template>
+            </button>
+            <div class="products" *ngIf="isShow">
+                <app-product-smart *ngFor="let product of products"
+                                   [product]="product" >
+                </app-product-smart>
+            </div>
+            <button class="general-item" (click)="isAddProduct()">
+                <h2>Add product</h2>
+                <div class="item-svg" *ngIf="isAdd else notAdd">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 15L12 9L6 15" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <ng-template #notAdd>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                </ng-template>
+            </button>
+            <div class="add-product" *ngIf="isAdd">
+                <form class="input-container" >
+                    <h5 class="title">Product name</h5>
+                    <input type="text" class="input-bar" id="title" placeholder="product name...">
+                </form>
+                <form class="input-container" >
+                    <h5 class="title">Price</h5>
+                    <input type="text" class="input-bar" id="price" placeholder="price...">
+                </form>
+                <form class="input-container" >
+                    <h5 class="title">City</h5>
+                    <select class="option-bar" id="city">
+                      <option value="option1">City is not selected</option>
+                      <option value="option1">Kyiv</option>
+                        <option value="option2">Lviv</option>
+                        <option value="option3">Odesa</option>
+                    </select>
+                </form>
+
+                <form class="input-container">
+                    <h5 class="title">Description</h5>
+                  <textarea class="text-bar" id="description" placeholder="Enter detail description"></textarea>
+                </form>
+                <input type="file" class="file-bar" id="file1"/>
+                <input type="file" class="file-bar" id="file2"/>
+                <input type="file" class="file-bar" id="file3"/>
+              <input type="submit" class="login-button" value="Add new product" (click)="addProduct()"/>
+            </div>
+
+        </div>
+        <div class="general">
+            <div><h3 class="title">General</h3></div>
+            <button class="general-item"><h2>Edit profile</h2></button>
+            <button class="general-item"><h2>Notification</h2></button>
+            <button class="general-item"><h2>Wishlist</h2></button>
+        </div>
+        <div class="general">
+            <div><h3 class="title">Personal</h3></div>
+            <button class="general-item"><h4>Log out</h4></button>
+        </div>
+    </div>
+</div>
